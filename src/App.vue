@@ -1,15 +1,54 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <MainView/>
+    <hr>
+    <router-view
+      :baseURL="baseURL"
+      :books="books"
+      @fetchData="fetchData"
+    ></router-view>
+    <hr>
+    <Carousel/>
+    <hr>
+    <Footer/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
+// import { Carousel3d, Slide } from 'vue-carousel-3d';
+import MainView from './components/MainView.vue'
+import Footer from './components/Footer.vue'
+import Carousel from './components/Carousel.vue';
+import axios from 'axios'
+export default{
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    MainView,Footer,Carousel
+  },
+  data() {
+    return {
+      baseURL: "http://localhost:3000/",
+      accounts: null,
+      books: null
+    }
+  },
+  methods: {
+    //fetch data 
+    async fetchData() {
+      try {
+        const accountRes = await axios.get(this.baseURL + "accounts")
+        this.accounts = accountRes.data;
+        console.log("Accounts: ", accountRes.data);
+        const bookRes = await axios.get(this.baseURL + "books");
+        this.books = bookRes.data;
+        console.log("Books: ", bookRes.data);
+      } catch (err) {
+        console.log("Error", err)
+      }
+    }
+  },
+  mounted() {
+    this.fetchData();
   }
 }
 </script>
