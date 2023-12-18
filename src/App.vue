@@ -5,6 +5,7 @@
     <router-view
       :baseURL="baseURL"
       :books="books"
+      :accounts="accounts"
       @fetchData="fetchData"
     ></router-view>
     <hr>

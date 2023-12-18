@@ -2,6 +2,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HelloWorld from '../components/HelloWorld.vue';
 import BookOldDate from '../Views/BookOldDate.vue';
+import Signup from '../Views/Signup.vue';
+import Signin from '../Views/Signin.vue';
 const routes = [
   {
     path: '/Home',
@@ -13,7 +15,16 @@ const routes = [
     name: 'BookOldDate',
     component: BookOldDate,
   },
-  // Thêm các route khác nếu cần
+  {
+    path: '/Signup',
+    name: 'Signup',
+    component: Signup,
+  },
+  {
+    path: '/Signin',
+    name: 'Signin',
+    component: Signin,
+  },
 ];
 
 const router = createRouter({
