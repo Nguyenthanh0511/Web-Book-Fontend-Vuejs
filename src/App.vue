@@ -10,22 +10,26 @@
       @fetchData="fetchData"
     ></router-view>
     <hr>
+    <HomeView/>
     <Carousel/>
+    <hr>
+    <SlideParent/>
     <hr>
     <Footer/>
   </div>
 </template>
-
 <script>
 // import { Carousel3d, Slide } from 'vue-carousel-3d';
 import MainView from './components/MainView.vue'
 import Footer from './components/Footer.vue'
 import Carousel from './components/Carousel.vue';
+import HomeView from './Views/HomeView.vue';
+import SlideParent from './Views/SlideParent.vue'
 import axios from 'axios'
 export default{
   name: 'App',
   components:{
-    MainView,Footer,Carousel
+    MainView,Footer,Carousel,SlideParent,HomeView
   },
   data() {
     return {
@@ -47,7 +51,7 @@ export default{
         console.log("Books: ", bookRes.data);
         const cartRes = await axios.get(this.baseURL + "cart");
         this.cartBook = cartRes.data;
-      } catch (err) {
+      } catch (err){
         console.log("Error", err)
       }
     }

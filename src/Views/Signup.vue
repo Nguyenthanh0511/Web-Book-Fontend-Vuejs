@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center pt-3">
-        <router-link :to="{ name: 'HelloWorld' }">
-        </router-link>
+        <!-- <router-link :to="{ name: 'HelloWorld' }">
+        </router-link> -->
       </div>
     </div>
     <div class="row">

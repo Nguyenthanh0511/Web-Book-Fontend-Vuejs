@@ -1,6 +1,6 @@
 // router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
-import HelloWorld from '../components/HelloWorld.vue';
+// import HelloWorld from '../components/HelloWorld.vue';
 import BookOldDate from '../Views/BookOldDate.vue';
 import Signup from '../Views/Signup.vue';
 import Signin from '../Views/Signin.vue';
@@ -8,11 +8,12 @@ import AddBook from '../Views/AddBook.vue';
 import EditBook from '../Views/EditBook.vue';
 import BookDetail from '../Views/BookDetail.vue';
 import Cart from '../Views/Cart.vue';
+import Home from '../Views/HomeView.vue';
 const routes = [
   {
     path: '/Home',
-    name: 'HelloWorld',
-    component: HelloWorld,
+    name: 'Home',
+    component: Home,
   },
   {
     path: '/Books',

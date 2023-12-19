@@ -51,7 +51,7 @@ export default {
                 await axios.post(`${this.baseURL}books/${this.id}`, this.book)
                 .then(() =>{
                     swal({
-                        text: "Thêm thành công",
+                        text: "sửa thành công",
                         icon: "success",
                         closeOnClickOutside: true,
                     });

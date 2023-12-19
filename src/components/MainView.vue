@@ -3,7 +3,7 @@
     <div class="row">
         <!-- Logo -->
         <div class="col-lg-4 col-md-6 col-sm-6 col-6">
-            <router-link class="navbar-brand" :to="{ name: 'HelloWorld' }">
+            <router-link class="navbar-brand" :to="{ name: 'Home' }">
                 <img class="mt-0" id="logo" src="../assets/LogoBook.jpg" style=" display:block; max-width:120px; border-radius: 50px; "/>
             </router-link>
         </div>
