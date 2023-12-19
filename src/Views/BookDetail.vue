@@ -5,7 +5,7 @@
            
             <div class="col-md-6 col-12 pt-3 pt-md-0">
                 <h4>{{ book.title }}</h4>
-                <h6 class="font-weight-bold"> $ {{ book.publishedYear }}</h6>
+                <h6 class="font-weight-bold"> $ {{ book.price }}</h6>
                 <p>
                     {{ book.author }}
                 </p>

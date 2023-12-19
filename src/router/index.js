@@ -7,6 +7,7 @@ import Signin from '../Views/Signin.vue';
 import AddBook from '../Views/AddBook.vue';
 import EditBook from '../Views/EditBook.vue';
 import BookDetail from '../Views/BookDetail.vue';
+import Cart from '../Views/Cart.vue';
 const routes = [
   {
     path: '/Home',
@@ -42,6 +43,11 @@ const routes = [
     path: '/Book/BookDetail/:id',
     name: 'BookDetail',
     component: BookDetail,
+  },
+  {
+    path: '/Book/Cart/',
+    name: 'Cart',
+    component: Cart,
   },
 ];
 

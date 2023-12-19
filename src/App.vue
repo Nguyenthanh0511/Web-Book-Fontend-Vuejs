@@ -6,6 +6,7 @@
       :baseURL="baseURL"
       :books="books"
       :accounts="accounts"
+      :cartBook="cartBook"
       @fetchData="fetchData"
     ></router-view>
     <hr>
@@ -30,7 +31,8 @@ export default{
     return {
       baseURL: "http://localhost:3000/",
       accounts: null,
-      books: null
+      books: null,
+      cartBook:null
     }
   },
   methods: {
@@ -43,6 +45,8 @@ export default{
         const bookRes = await axios.get(this.baseURL + "books");
         this.books = bookRes.data;
         console.log("Books: ", bookRes.data);
+        const cartRes = await axios.get(this.baseURL + "cart");
+        this.cartBook = cartRes.data;
       } catch (err) {
         console.log("Error", err)
       }
