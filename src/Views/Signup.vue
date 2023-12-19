@@ -102,7 +102,7 @@ export default {
             username:null,
             firstName:null,
             password:null,
-            role:null,
+            role:"user",
             passwordConfirm:null,
             accounts:[],
         }

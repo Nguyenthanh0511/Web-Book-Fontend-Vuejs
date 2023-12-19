@@ -65,9 +65,8 @@ export default {
     },
     methods: {
             async signin(e) {
-            e.preventDefault();
+            e.preventDefault(); 
             this.loading = true;
-
             const user = {
                 username: this.username,
                 password: this.password,
@@ -75,7 +74,7 @@ export default {
              // Kiểm tra xem users có tồn tại không
             if (this.accounts && this.accounts.length > 0) {
                 try {
-                const foundUser = this.accounts.find(u => u.username === user.username);
+                const foundUser = this.accounts.find(a => a.username === user.username);
                 if (foundUser && foundUser.password === user.password) {
                     localStorage.setItem("UserRole", foundUser.role); // khóa và value 
                     swal({
@@ -91,7 +90,6 @@ export default {
                 }
                 } catch (err) {
                     console.error("Đăng nhập thất bại:", err);
-
                     swal({
                         text: "Đăng nhập thất bại. Vui lòng kiểm tra thông tin đăng nhập của bạn.",
                         icon: "error",
@@ -105,6 +103,8 @@ export default {
                 }
             },
         },
+        //Làm thêm chức năng đăng xuất , nêu đã có user trên local storage thì xóa đi 
+        
 
 }
 </script>
