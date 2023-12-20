@@ -8,7 +8,7 @@ import AddBook from '../Views/AddBook.vue';
 import EditBook from '../Views/EditBook.vue';
 import BookDetail from '../Views/BookDetail.vue';
 import Cart from '../Views/Cart.vue';
-import Home from '../Views/HomeView.vue';
+import Home from '../components/Carousel.vue';
 const routes = [
   {
     path: '/Home',

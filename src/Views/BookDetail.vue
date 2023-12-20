@@ -23,7 +23,7 @@
                     <button
                     type=""
                     id="add-to-cart-button"
-                    class="btn"
+                    class="btn btn-primary h-50 mt-4"
                     @click ="addToCart(this.id)"
                     >
                     Thêm cart

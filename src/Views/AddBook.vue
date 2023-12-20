@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h4 class="pt-3">Add new Tour</h4>
+        <h4 class="pt-3">Add new Book</h4>
       </div>
     </div>
 
@@ -26,6 +26,10 @@
             <label>publishedYear</label>
             <input type="number" class="form-control" v-model="pblishedYear" required />
           </div>
+          <div class="form-group">
+            <label>Price</label>
+            <input type="number" class="form-control" v-model="price" required />
+          </div>
         </form>
         <div>
           <button type="button" class="d-flex justify-content-center btn btn-primary" @click="addBook">Submit</button>
@@ -47,6 +51,7 @@ export default {
             author:"Trang",
             imageURL:null,
             publishedYear:null,
+            price:0
         }
     },
     methods: {
@@ -55,7 +60,8 @@ export default {
                 title:this.title,
                 author:this.author,
                 imageURL:this.imageURL,
-                publishedYear:this.publishedYear
+                publishedYear:this.publishedYear,
+                price:this.price
             }
             try{
                 await axios.post(`${this.baseURL}books`,book)

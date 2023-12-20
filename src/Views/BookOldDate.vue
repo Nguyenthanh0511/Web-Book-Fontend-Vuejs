@@ -2,8 +2,10 @@
   <div class="container">
     <div class="row">
         <div class="col-12">
-
-        </div>
+          <router-link v-if="isRoles() == 'admin' " class="navbar-brand" :to="{ name: 'AddBook' }">
+                Add Book
+            </router-link>
+        </div>  
     </div>
     <div class="row">
         <div 
@@ -21,8 +23,13 @@ export default{
 //đăng ký axios 
 name:"BookOldDate",
 components:{BookChild},
-props:["books"]
-
+props:["books"],
+methods:{
+  isRoles(){
+    return localStorage.getItem("UserRole");
+    
+  }
+}
 //Call api 
 
 }

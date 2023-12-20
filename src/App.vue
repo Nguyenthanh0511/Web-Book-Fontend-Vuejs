@@ -10,10 +10,10 @@
       @fetchData="fetchData"
     ></router-view>
     <hr>
-    <HomeView/>
-    <Carousel/>
+    <!-- <HomeView/> -->
+    <Carousel v-if="!$route.name === '/Home'"/>
     <hr>
-    <SlideParent/>
+    <SlideParent />
     <hr>
     <Footer/>
   </div>
@@ -23,13 +23,13 @@
 import MainView from './components/MainView.vue'
 import Footer from './components/Footer.vue'
 import Carousel from './components/Carousel.vue';
-import HomeView from './Views/HomeView.vue';
+// import HomeView from './Views/HomeView.vue';
 import SlideParent from './Views/SlideParent.vue'
 import axios from 'axios'
 export default{
   name: 'App',
   components:{
-    MainView,Footer,Carousel,SlideParent,HomeView
+    MainView,Footer,Carousel,SlideParent,
   },
   data() {
     return {
