@@ -20,5 +20,12 @@ npm run build
 npm run lint
 ```
 
+Bước tiếp theo nhớ tải thêm Json serve 
+
+npm install -g json-server
+
+Mở cổng 
+
+json-server --watch db.json --port 3000
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
