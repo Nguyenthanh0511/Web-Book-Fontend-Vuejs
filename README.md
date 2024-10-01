@@ -1,5 +1,5 @@
 # buybookold
-
+This is a Vue.js-based project for buying and ordering old books. The project is in the initial stage of development and includes basic setup and configuration files.
 ## Project setup
 ```
 npm install
